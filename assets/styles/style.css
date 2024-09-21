@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+
+}
+
+
+header {
+    width: 100%;
+    height: 60rem;
+    background: url(/assets/images/desktop/image-hero.jpg) no-repeat center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+    /* font-family: "Alata", sans-serif; */
+    padding: 5rem 15rem;
+}
+
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12rem;
+    align-items: center;
+}
+
+nav .nav-items {
+    display: flex;
+    gap: 3rem;
+}
+nav .nav-items > li, 
+footer .left-side .footer-items li {
+    list-style-type: none;
+    display: inline;
+    position: relative;
+}
+
+nav .nav-items  a,
+footer .left-side .footer-items a {
+    font-family: "Alata", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: hsl(0, 0%, 100%);
+}
+
+
+p.logo,
+footer .left-side p {
+    font-size: 3.2rem;
+    color: hsl(0, 0%, 100%);
+    font-family: "Days One", serif;
+}
+
+.navbar .menu-icon {
+    display: none;
+}
+
+.header_context-container {
+    width: 58%;
+    border: 0.2rem solid hsl(0, 0%, 100%);
+    padding:3rem  0  4rem 4rem ;
+    text-align: left;
+    /* margin-left: 140px; */
+}
+.header_context-container h2 {
+    color: hsl(0, 0%, 100%);
+    /* font-family: "Josefin Sans", sans-serif; */
+    font-weight: 300;
+    font-size: 6.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+.section {
+    transition: transform 1s, opacity 1s;
+
+}
+
+.section-hidden {
+    opacity: 0;
+    transform:translateY(5rem);
+}
+
+
+.section-1 {
+    display: flex;
+    padding: 15rem ;
+    position: relative;
+}
+
+.section-1 > .img-container > img{
+   width: 90%;
+}
+
+.section-1 > .context-container {
+    width: 43%;
+    padding: 8rem 8.5rem 2rem;
+    background-color: hsl(0, 0%, 100%);
+    position: absolute;
+    right: 15rem;
+    top: 32rem;
+
+}
+
+.section-1 > .context-container h2 {
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 4.4rem;
+}
+
+.section-1 > .context-container p {
+    font-family: "Alata", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+    color: hsl(0, 0%, 55%);
+
+}
+
+.section-2 {
+    padding: 15rem;
+}
+
+.section-2  > .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-2  > .top > p {
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 4.4rem;
+}
+
+
+.section-2 .btn {
+    display: block;
+    padding: 0 4rem;
+    border: 0.1rem solid black;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.section-2 .btn > a {
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-size: 1.1rem;
+    line-height: 1rem;
+    font-weight: 700;
+    font-family: "Alata", sans-serif;
+
+}
+
+.section-2 .botton-btn {
+    display: none;
+}
+
+.section-2  > .top > .btn:hover,
+.section-2  > .top > .btn:hover > a {
+    color: hsl(0, 0%, 100%);
+    border: none;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.section-2 .items-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin-top: 10rem;
+}
+
+/* NEDDS TO ADD BACKGROUND COLOR */
+.section-2 .items-container > .item {
+    width: 22%;
+    position: relative;
+    /* background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken; */
+}
+
+.section-2 .items-container > .item img {
+    width: 100%;
+}
+
+
+.section-2 .items-container > .item:before {
+    content: "";
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    /* opacity: 20%; */
+    /* cursor: pointer; */
+    transition: 0.5s;
+    opacity: 0.2;
+    background-color: rgba(0, 0, 0, 1); 
+  transition: opacity 0.5s ease;
+}
+
+
+/* Fix this */
+.section-2 .items-container > .item:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* opacity: 20%; */
+    cursor: pointer;
+    /* transition: 0.5s; */
+    opacity: 0.5;
+    background-color: rgba(100, 100, 100, .7); 
+  transition: opacity 0.5s ease;
+}
+/*  NEEDS TO BE FIXED */
+.section-2 .items-container > .item:hover > p {
+    color: black;
+    z-index: 1;
+}
+
+.section-2 .items-container > .item p {
+    position: absolute;
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    bottom: 3rem;
+    left: 4rem;
+    color: hsl(0, 0%, 100%);
+    word-wrap: break-word;
+
+}
+
+.section-2 .items-container > .item p > span {
+    word-wrap: break-word;
+}
+
+.for-small-screen {
+    display: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    text-align: center;
+    background-color: black;
+    height: 15rem;
+    gap: 5rem;
+    padding-top: 4rem;
+    opacity: 1 !important;
+    transition: none !important;
+}
+
+.footer-top {
+    display: flex;
+    /* flex-direction: row; */
+    padding: 0 15rem;
+    margin-bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .left-side {
+    flex: 1;
+    /* margin-top: 40px; */
+
+}
+
+footer .left-side p {
+    text-align: left;
+    margin-bottom: 3rem;
+    font-size: 2.4rem;
+}
+
+footer .left-side .footer-items {
+    display: flex;
+    gap: 3rem;
+}
+
+footer .right-side {
+    flex: 1;
+    text-align: right;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logos-container {
+    margin-bottom: 2rem;
+}
+
+.logos-container a {
+    position: relative;
+}
+
+.logos-container img {
+    width: 6%;
+}
+
+/* Hover style of navbar and footer */
+.left-side .footer-items a::after,
+.right-side .logos-container a::after,
+nav .nav-items > li::after {
+    content: '';
+    position: absolute;
+    left: 25%;
+    bottom:-1rem;
+    /* bottom: -10px; */
+    transform: translateY(-50%);
+    width: 0;
+    height: .2rem; /* ضخامت بوردر */
+    background-color: white; /* رنگ بوردر */
+    transition: width 0.3s ease-in-out;
+}
+
+.left-side .footer-items a:hover::after,
+.right-side .logos-container a:hover::after,
+nav .nav-items > li:hover::after {
+    width: 50%; /* عرض بوردر هنگام هاور */
+}
+
+footer .right-side p {
+    color: hsl(0, 0%, 55%);
+    font-size: 1.4rem;
+}
+
+.attribution {
+    background-color: black;
+    line-height: 2rem;
+    /* margin: 0;
+    padding: 0; */
+    margin-top: 0;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.3rem;
+    text-align: center; 
+    width: 100%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
