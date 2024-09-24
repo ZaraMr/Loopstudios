@@ -19,7 +19,7 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 })
 sections.forEach(function(section) {
     sectionObserver.observe(section);
-    //  section.classList.add('section-hidden')
+     section.classList.add('section-hidden')
     })
 
 // Menu fade animation 
