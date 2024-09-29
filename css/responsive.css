@@ -7,8 +7,38 @@
         width: 100%;
         overflow: hidden;
         margin: 0 auto;
-        height: 70rem;
-        padding: 5rem 2rem;
+        height: 100vh;
+        padding:0 2rem;
+    }
+
+    nav.navbar {
+        position: relative;
+        justify-content:flex-start;
+        align-items: flex-start;
+        padding-top: 3rem;
+        gap: 15rem;
+        margin-bottom: 7rem;
+    }
+
+    #mobile-nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: #000;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        align-items: flex-start;
+        padding-left: 3rem;
+        padding-top: 3rem;
+        transition: 0.3s ease-in-out;
+    }
+
+    .top-nav {
+        display: flex;
+        gap: 18rem;
+        align-items: center;
     }
 
     .navbar p.logo {
@@ -22,15 +52,44 @@
         stroke: hsl(0, 0%, 100%);;
     }
     nav .nav-items {
-        display: none;
-        background-color: red;
+        width: 100%;
+        flex-direction: column;
+        gap: 1.8rem;
     }
+
+    nav .nav-items > li > a {
+        font-size: 2rem;
+        font-weight: 100 !important;
+        color: hsl(0, 0%, 55%);
+        text-transform: uppercase;
+    }
+
+    /* nav .nav-items > li > a:hover {
+        display: none;
+    } */
+
+    nav .nav-items > li:hover::after,
+    footer .left-side .footer-items a:hover::after,
+    footer .right-side .logos-container a:hover::after {
+        width: 0; /* Disable the hover effect */
+    }
+
+    /* nav .nav-items > li,
+    footer .left-side .footer-items a,
+    footer .right-side .logos-container a {
+        pointer-events: none;
+    } */
+
+
+
+
 
 
     .header_context-container {
     width: 90%;
     margin: 0 auto;
     padding: 2rem;
+    /* margin-top: 0; */
     }
 
     .header_context-container h2 {

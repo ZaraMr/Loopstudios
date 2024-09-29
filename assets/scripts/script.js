@@ -22,8 +22,8 @@ sections.forEach(function(section) {
      section.classList.add('section-hidden')
     })
 
-// Menu fade animation 
 
+// Menu fade animation 
 const nav = document.querySelector('.navbar');
 const showNavItem = function(e) {
     if(e.target.classList.contains('nav-item')){
@@ -40,24 +40,26 @@ const showNavItem = function(e) {
 nav.addEventListener('mouseover', showNavItem.bind(0.5))
 nav.addEventListener('mouseout', showNavItem.bind(1))
 
-// Changing section-2's imgs 
-// const sec2Items = document.querySelectorAll('.item')
-// console.log(sec2Items)
+const menuIcon = document.querySelector('.menu-icon')
 
-// const screenW = screen.width;
-// console.log(screenW)
+menuIcon.addEventListener('click', function(e) {
 
-// sec2Items.forEach(function(i) {
-//     i.classList.add('responsive');
-// })
 
-// const adjustSec2Items = function() {
-//     if(screenW < 900) {
-//         sec2Items.forEach(function(i) {
-//             i.style.display = 'none'
-//         })
+const clicked = e.target;
+// console.log(nav.id)
 
-//         // body.style.backgroundColor = 'red'
-//     }
-// }
-// adjustSec2Items()
+if(!nav.id) {
+    nav.id = 'mobile-nav';
+    menuIcon.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="menu-icon">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>`
+}
+else {
+    nav.removeAttribute("id");
+    menuIcon.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="menu-icon">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>`
+}
+}
+
+)
